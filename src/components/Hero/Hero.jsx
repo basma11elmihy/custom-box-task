@@ -20,6 +20,7 @@ function SampleArrow(props) {
         src={type === "next" ? nextArrow : prevArrow}
         width={25}
         height={25}
+        alt="arrow"
       />
     </div>
   );
@@ -40,29 +41,29 @@ const Hero = () => {
   return (
     <div className="container">
       <Slider {...settings}>
-        {sliderData.map((slider, index) => (
-          <div className="inner-slider-section" key={index}>
-            <div className="grid-item">
-              <div className="grid-item-container">
-                <p className="slider-header-text">{slider.headerText}</p>
-                <p className="slider-text">{slider.text}</p>
-                {slider.button && (
-                  <button className="slider-button">GET STARTED</button>
-                )}
+          {sliderData.map((slider, index) => (
+            <div className="inner-slider-section" key={index}>
+              <div className="grid-item">
+                <div className="grid-item-container">
+                  <p className="slider-header-text">{slider.headerText}</p>
+                  <p className="slider-text">{slider.text}</p>
+                  {slider.button && (
+                    <button className="slider-button">GET STARTED</button>
+                  )}
+                </div>
+              </div>
+              <div className="grid-item">
+                <Image
+                  src={slider.imageSrc}
+                  width={600}
+                  height={600}
+                  className="slider-image"
+                  alt="cover"
+                />
               </div>
             </div>
-            <div className="grid-item">
-              <Image
-                src={slider.imageSrc}
-                width={600}
-                height={600}
-                className="slider-image"
-                alt="cover"
-              />
-            </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>       
     </div>
   );
 };

@@ -36,16 +36,16 @@ const FormSection = () => {
         {({ isSubmitting }) => (
           <Form className="form-div">
             <div className="form-first-row">
-            <Field className="name-field" type="text" name="name" placeHolder="Full Name" />
+            <Field className="name-field" type="text" name="name" placeholder="Full Name" />
             {/* <ErrorMessage className="error-text" name="name" component="div" /> */}
 
-            <Field className="email-field" type="email" name="email" placeHolder="Email"/>
+            <Field className="email-field" type="email" name="email" placeholder="Email"/>
             {/* <ErrorMessage className="error-text" name="email" component="div" /> */}
 
-            <Field className="phone-field" type="number" name="phoneNumber" placeHolder="Phone Number"/>
+            <Field className="phone-field" type="number" name="phoneNumber" placeholder="Phone Number"/>
             <ErrorMessage className="error-text" name="phoneNumber" component="div" />
 
-            <Field className="message-field" type="text" name="message" rows={5} placeHolder="Message"/>
+            <Field className="message-field" type="text" name="message" rows={5} placeholder="Message"/>
             <ErrorMessage className="error-text" name="message" component="div" />
             </div>        
 

@@ -1,11 +1,32 @@
 .container {
   height: 100vh;
-  background-color: #527391;
+  background-color: #4C718C;
+  position: relative;
+  background-image: url("../../../public/assets/poly.png");
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../../../public/assets/tree.jfif");
+    background-size: cover;
+    opacity: 0.04;
+    z-index: 0;
+  }
+
   .inner-slider-section {
+    position: relative; 
     display: flex !important;
     height: 90vh;
     justify-content: center;
     align-items: center;
+    z-index: 2; 
 
     .grid-item {
       width: 50%;
@@ -40,6 +61,7 @@
   }
 }
 
+
 .next-arrow {
   position: absolute;
   cursor: pointer;
@@ -50,6 +72,7 @@
   align-items: center;
   right: 6rem;
   bottom: 0;
+  z-index: 10;
 }
 
 .prev-arrow {
@@ -69,6 +92,7 @@
   bottom: -5px !important;
   left: 32.5%;
   padding: 10px;
+  z-index: 10;
   li {
     margin: 12 0 0 0 !important;
     bottom: 25px;

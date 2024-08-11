@@ -1,4 +1,5 @@
 .contact-container {
+  position: relative;
   background: linear-gradient(
     to bottom,
     #385168 0%,
@@ -6,7 +7,6 @@
     #efefef 30%,
     #efefef 100%
   );
-  min-height: 112vh;
   display: flex;
 
   &:after {
@@ -28,26 +28,30 @@
   .contact-content-left {
     width: 60%;
     position: relative;
-    padding: 0 5%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
 
-    .contact-header {
-      font-size: 54px;
-      max-width: 50%;
-      padding-top: 10%;
-    }
+    .contact-top {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      justify-content: space-between;
+      .contact-header {
+        font-size: 54px;
+        max-width: 50%;
+        padding-top: 50px;
+        width: 40%;
+      }
 
-    .contact-image {
-      position: absolute;
-      top: 2%;
-      right: 0%;
+      .contact-image {
+        width: 40%;
+      }
     }
 
     .form-section {
-      margin-top: 15%;
-
       .form-header {
         font-size: 54px;
-        padding-top: 15%;
         color: #385168;
       }
       .form-paragraph {
@@ -57,25 +61,70 @@
 
       .span-text {
         color: #40be6c;
-      }      
+      }
     }
 
     .form-rect {
-        background-color: white;
-        border-radius: 4px;
-        padding: 5%;
-        margin: 5% 0;
+      background-color: white;
+      border-radius: 4px;
+      padding: 25px;
+      margin: 34px 0;
 
-        .form-title {
-          text-align: center;  
-          font-size: 54px;
-          color: #385168;
-        }
+      .form-title {
+        text-align: center;
+        font-size: 54px;
+        color: #385168;
       }
+    }
   }
 
   .contact-content-right {
     width: 40%;
-    padding: 0 25px;
+    align-items: flex-start;
+    padding-right: 50px;
+
+    .communication-container {
+      background-color: white;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      color: #385168;
+      margin-top: 111px;
+      padding: 0 30px;
+      padding-top: 30px;
+      padding-bottom: 25px;
+
+      .hub-title {
+        color: #1f4d6f;
+        font-size: 48px;
+        padding-bottom: 10px;
+      }
+
+      .blue-header {
+        color: #68aade;
+        font-size: 32px;
+      }
+
+      .blue-value {
+        color: #1f4d6f;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .phoneNumbers {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .column {
+          display: flex;
+
+          .country_img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 }
